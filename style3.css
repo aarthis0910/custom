@@ -1,0 +1,344 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x:hidden;
+}
+
+/* Header/Nav */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.logo span {
+  font-weight: normal;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+ 
+}
+nav a.active, nav a:hover {
+  color: red;
+}
+.btn {
+  background: red;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: white;
+  padding: 100px 5% 50px;
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 0, 0, 0.3); /* Red transparent overlay */
+  z-index: -1;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 50%;
+  color: white;
+  padding-left:25px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content span {
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cta-btn:hover {
+  background-color: #ff0000; /* Red */
+  color: white;
+}
+/* Mission Box */
+.mission-box {
+  background-color: white;
+  color: black;
+  padding: 3rem;
+  max-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+   margin-right: 0.6rem; 
+  
+}
+
+.mission-icon {
+  width: 105px;
+  margin-bottom: 1rem;
+  height:120px;
+}
+
+.mission-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.mission-box h3 {
+  transition: color 0.3s ease;
+}
+
+.mission-box:hover h3 {
+  color: #ff0000; /* or use 'red' if preferred */
+}
+
+
+.mission-box p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.explore-link {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+.stat-cards-section {
+  padding: 60px 20px;
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.stat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.stat-cards .card {
+  background-color: #ffe6e6;
+  border-radius: 12px;
+  padding: 30px 20px;
+  flex: 1 1 calc(33.33% - 40px); /* 3 per row */
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.stat-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-cards .card h2 {
+  font-size: 2rem;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.stat-cards .card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .stat-cards .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-cards .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .stat-cards .card {
+    width: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.client-trust-section {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.client-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.client-logos-grid {
+   display: grid;
+  grid-template-columns: repeat(7, 1fr); /* adjust based on how many per row */
+  gap: 0; /* no gap — we'll add visual spacing via padding */
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.client-logo {
+ position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
+}
+
+.client-logo img {
+  max-height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.client-logo:not(:nth-child(7n))::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: 0;
+  width: 1px;
+  background-color: #999;
+}
+
+
+
+/* Horizontal lines only below first-row logos (1 to 7) */
+.client-logo:nth-child(-n+7)::before {
+  content: '';
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 0;
+  height: 1px;
+  background-color: #999;
+}
+
+@media (max-width: 600px) {
+  .client-logo {
+    padding: 15px;
+  }
+}
